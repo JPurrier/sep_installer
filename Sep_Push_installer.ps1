@@ -1,5 +1,5 @@
 $server_ou = (Get-ADOrganizationalUnit -Filter 'Name -like "Servers"').DistinguishedName 
-$computers = Get-ADComputer -SearchBase $server_ou
+$computers = Get-ADComputer -SearchBase $server_ou -Filter *
 
 
 ForEach($item in $computers)
