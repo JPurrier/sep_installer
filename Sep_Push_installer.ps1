@@ -18,8 +18,9 @@ ForEach($item in $computers.name)
         
         if(!(Test-Path "C:\Program Files (x86)\Symantec\Symantec Endpoint Protection"))
         {
-            Start-Process "c:\sep\sep.exe" -Wait
             Write-Host "installing SEP"
+            Start-Process "c:\sep\sep.exe" -Wait
+            
         }
         
         if(Test-Path 'c:\sep' )
